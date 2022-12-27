@@ -12,6 +12,10 @@ app.listen(port || 8080, () => {
   console.group(`port ${port}`);
 });
 
+app.get("/", (req, res) => {
+  res.json({ message: "API Live" });
+});
+
 app.post("/addExpense", (req, res) => {
   var data = JSON.stringify({
     parent: {
