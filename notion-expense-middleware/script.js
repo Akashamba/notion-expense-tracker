@@ -15,7 +15,7 @@ app.listen(port || 8080, () => {
 app.post("/addExpense", (req, res) => {
   var data = JSON.stringify({
     parent: {
-      database_id: process.env.NOION_DATABASE_ID,
+      database_id: process.env.NOTION_DATABASE_ID,
     },
     properties: {
       Expense: {
